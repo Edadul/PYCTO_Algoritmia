@@ -7,6 +7,9 @@ public class Player_Movement : MonoBehaviour
     public float Speed;
     public float JumpForce;
 
+    public PolygonCollider2D ColliderI2D;
+    public CapsuleCollider2D ColliderR2D;
+
     private Rigidbody2D Rb2D;
     private Animator Animator;
 
@@ -17,14 +20,31 @@ public class Player_Movement : MonoBehaviour
     {
         Rb2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        Vector3 position = gameObject.transform.position;
     }
 
     void Update()
     {
         Horizontal = Input.GetAxis("Horizontal");
 
-        if(Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        if(Horizontal < 0.0f) 
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            ColliderR2D.enabled = true;
+            ColliderI2D.enabled = false;
+        }
+        else if (Horizontal > 0.0f) 
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            ColliderR2D.enabled = true;
+            ColliderI2D.enabled = false;
+        }
+        else if (Horizontal == 0.0f)
+        {
+            ColliderR2D.enabled = false;
+            ColliderI2D.enabled = true;
+        }
+
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
@@ -39,6 +59,7 @@ public class Player_Movement : MonoBehaviour
         {
             Jump();
         }
+
     }
 
     private void Jump()
