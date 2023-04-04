@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 3318727561
+    locked: 0
+  - name: Nubes
+    uniqueID: 753322817
+    locked: 0
+  - name: "Monta\xF1as"
+    uniqueID: 3432619761
+    locked: 0
+  - name: Player and grid
+    uniqueID: 1526203169
+    locked: 0
