@@ -6,7 +6,9 @@ public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject opc;
    private bool detenido=false;
+   private bool stop=false;
    public void Update(){
     if(Input.GetKeyDown(KeyCode.Escape)){
         if(detenido){
@@ -14,9 +16,15 @@ public class MenuPausa : MonoBehaviour
         }else{
             Paused();
         }
-    }
+        if(stop){
+            volver();
+        }else{
+        opciones();
+        }
    }
-    public void Paused(){
+    
+}
+public void Paused(){
         detenido=true;
         Time.timeScale=0f;
         botonPausa.SetActive(false);
@@ -30,5 +38,17 @@ public class MenuPausa : MonoBehaviour
     }
     public void Quit (){
         Application.Quit();
+    }
+    public void opciones(){
+        detenido=true;
+        Time.timeScale=0f;
+        menu.SetActive(false);
+        opc.SetActive(true);
+    }
+    public void volver(){
+        detenido=false;
+        Time.timeScale=0f;
+        menu.SetActive(true);
+        opc.SetActive(false);
     }
 }
