@@ -13,16 +13,16 @@ public class MenuPausa : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.Escape)){
         if(detenido){
             RESUMEN();
+            if(stop){
+            volver();
+            }
         }else{
             Paused();
-        }
-        if(stop){
-            volver();
-        }else{
-        opciones();
-        }
+            if(stop){
+            opciones();
+            }
+        }    
    }
-    
 }
 public void Paused(){
         detenido=true;
@@ -32,6 +32,7 @@ public void Paused(){
     }
     public void RESUMEN(){
         detenido=false;
+
         Time.timeScale=1f;
         botonPausa.SetActive(true);
         menu.SetActive(false);
@@ -40,13 +41,13 @@ public void Paused(){
         Application.Quit();
     }
     public void opciones(){
-        detenido=true;
+        stop=true;
         Time.timeScale=0f;
         menu.SetActive(false);
         opc.SetActive(true);
     }
     public void volver(){
-        detenido=false;
+        stop=false;
         Time.timeScale=0f;
         menu.SetActive(true);
         opc.SetActive(false);
