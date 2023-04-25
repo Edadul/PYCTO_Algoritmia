@@ -58,6 +58,10 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Grounded)
         {
             Jump();
+        Animator.SetBool("Bolita", Horizontal!=0.0f);   
+        }
+        if(Input.GetKeyDown(KeyCode.S)){
+            Animator.SetBool("Bolita", Horizontal==0.0f);
         }
 
     }
@@ -65,7 +69,7 @@ public class Player_Movement : MonoBehaviour
     private void Jump()
     {
         Rb2D.AddForce(Vector2.up * JumpForce);
-
+        
 
     }
 
