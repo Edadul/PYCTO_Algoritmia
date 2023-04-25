@@ -12,7 +12,7 @@ public class Puntaje : MonoBehaviour
     }
     private void Update()
     {
-        scoore+=Time.deltaTime;
+
         textMesh.text=scoore.ToString("0");
     }
     public void SumarScoore(float Puntos){
