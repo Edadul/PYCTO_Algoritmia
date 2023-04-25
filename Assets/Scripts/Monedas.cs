@@ -10,7 +10,6 @@ public class Monedas : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Jugador")){
             points.SumarScoore(Cantidad);
-            Instantiate(efecto,transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
