@@ -103,11 +103,7 @@
     },
     "com.unity.cinemachine": {
       "version": "2.8.9",
-<<<<<<< HEAD
-      "depth": 0,
-=======
       "depth": 1,
->>>>>>> ab9cf7840ca8d6479957a2fda9e7b8a68a385880
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.31"

@@ -46,7 +46,7 @@ public class Player_Movement : MonoBehaviour
         }
 
 
-        Animator.SetBool("Running", Horizontal != 0.0f);
+        Animator.SetBool("Running", Horizontal != 0.0f && Grounded == true);
 
         Debug.DrawRay(transform.position, Vector2.down*0.3f, Color.red);
         if(Physics2D.Raycast(transform.position, Vector2.down, 0.3f))
@@ -57,11 +57,13 @@ public class Player_Movement : MonoBehaviour
         }
        
 
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded==true)
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
             Jump();
-        Animator.SetBool("Bolita", Horizontal!=0.0f);   
+               
         }
+        Animator.SetBool("Bolita", Grounded == false);
+
     }
 
     private void Jump()
@@ -70,6 +72,7 @@ public class Player_Movement : MonoBehaviour
         
 
     }
+    
 
     private void FixedUpdate()
     {
