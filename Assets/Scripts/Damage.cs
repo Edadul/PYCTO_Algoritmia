@@ -6,6 +6,6 @@ public class Damage : MonoBehaviour
 {
      private void OnCollisionEnter2D(Collision2D collision)
    {
-    
+    collision.transform.GetComponent<Player_respawn>().PlayerDamaged();
    }
 }

@@ -60,8 +60,9 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Grounded==true)
         {
             Jump();
-        Animator.SetBool("Bolita", Horizontal!=0.0f);   
+          
         }
+        Animator.SetBool("Bolita", Horizontal!=0.0f); 
     }
 
     private void Jump()
