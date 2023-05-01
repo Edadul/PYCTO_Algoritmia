@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5f60034967c6c2f4f91b0572c8231061
+guid: 20fbe2b79e640074e9812597f1a71b83
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sonic_running_high_0
+      name: sonic_running_high 1_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 8
-        width: 93
-        height: 114
+        x: 9
+        y: 3
+        width: 40
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b28047aff9d2544986e0feaa33df1f1
-      internalID: 2021956173
+      spriteID: 4945c2e2439fa5e439c8e36b06671393
+      internalID: -1461214233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_1
+      name: sonic_running_high 1_1
       rect:
         serializedVersion: 2
-        x: 173
-        y: 9
-        width: 105
-        height: 111
+        x: 70
+        y: 3
+        width: 40
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf3b895e17fb7414e9f1229aefbc57b3
-      internalID: -1173890395
+      spriteID: 84961ba53c6cc5441a0956a66426fec4
+      internalID: -343295568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_2
+      name: sonic_running_high 1_2
       rect:
         serializedVersion: 2
-        x: 313
-        y: 8
-        width: 117
-        height: 96
+        x: 126
+        y: 5
+        width: 40
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5592c9cfe143eb46aff73c120a939ec
-      internalID: -297018724
+      spriteID: 42cce666986a738489ab1233ac365501
+      internalID: -960701593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_3
+      name: sonic_running_high 1_3
       rect:
         serializedVersion: 2
-        x: 474
-        y: 13
-        width: 105
-        height: 102
+        x: 187
+        y: 4
+        width: 40
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb041b5688b87c849add20ed1029b7e9
-      internalID: -367843726
+      spriteID: b09f1b40cf864f24c99e9ae93e436539
+      internalID: 2097867692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_4
+      name: sonic_running_high 1_4
       rect:
         serializedVersion: 2
-        x: 615
-        y: 8
-        width: 117
-        height: 96
+        x: 246
+        y: 2
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b00cbb6c4ea427a439810c5b030ee534
-      internalID: 208756220
+      spriteID: 4d7400f06c5d8194da568561707e324b
+      internalID: -441317172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_5
+      name: sonic_running_high 1_5
       rect:
         serializedVersion: 2
-        x: 776
-        y: 13
-        width: 105
-        height: 102
+        x: 306
+        y: 3
+        width: 40
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87dbdc6f3a7aabc47965c1078c82b3da
-      internalID: 725184640
+      spriteID: 6bf3ce68b6001ed4fb5905eccab6f215
+      internalID: -310336454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_6
+      name: sonic_running_high 1_6
       rect:
         serializedVersion: 2
-        x: 917
-        y: 8
-        width: 117
-        height: 96
+        x: 364
+        y: 5
+        width: 40
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52c7af4388c02764cbede510996c10fc
-      internalID: -846090292
+      spriteID: dc47bf72771c0064299f07cef91f1889
+      internalID: -1434824677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_running_high_7
+      name: sonic_running_high 1_7
       rect:
         serializedVersion: 2
-        x: 1078
-        y: 13
-        width: 105
-        height: 102
+        x: 426
+        y: 4
+        width: 40
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd20111dc877b1a4b9ad5c70787bba5b
-      internalID: 1682879608
+      spriteID: e2cb14f217748ad468d9820638717679
+      internalID: 1332074202
       vertices: []
       indices: 
       edges: []
@@ -283,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sonic_running_high_0: 2021956173
-      sonic_running_high_1: -1173890395
-      sonic_running_high_2: -297018724
-      sonic_running_high_3: -367843726
-      sonic_running_high_4: 208756220
-      sonic_running_high_5: 725184640
-      sonic_running_high_6: -846090292
-      sonic_running_high_7: 1682879608
+      sonic_running_high 1_0: -1461214233
+      sonic_running_high 1_1: -343295568
+      sonic_running_high 1_2: -960701593
+      sonic_running_high 1_3: 2097867692
+      sonic_running_high 1_4: -441317172
+      sonic_running_high 1_5: -310336454
+      sonic_running_high 1_6: -1434824677
+      sonic_running_high 1_7: 1332074202
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
