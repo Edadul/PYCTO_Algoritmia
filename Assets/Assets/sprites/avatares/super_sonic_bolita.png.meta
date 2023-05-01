@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: super_sonic_bolita_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f60c6426225fc4da6715a54e1c7935
+      internalID: -571694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 9
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b4b100130e9a140af194727d586587
+      internalID: -419727245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 7
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ba9b8b26dcd994a983074293e06eb9
+      internalID: -181674091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 6
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32809df3cc7bdbf4e851acfd5b7e2dc7
+      internalID: -248823496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_4
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 5
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f370fc5285d114fb92885fd592c2fc
+      internalID: -1862402410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_5
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 6
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30d29f26ba285a4f985353d5cdeb9c9
+      internalID: 842570572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_6
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 4
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e0da944b1d30f4387057f66d4fe4c1
+      internalID: 1637831395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_sonic_bolita_7
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 6
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b8d9f05592bd6418d3e13d7f85269b
+      internalID: -1879998811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +282,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      super_sonic_bolita_0: -571694
+      super_sonic_bolita_1: -419727245
+      super_sonic_bolita_2: -181674091
+      super_sonic_bolita_3: -248823496
+      super_sonic_bolita_4: -1862402410
+      super_sonic_bolita_5: 842570572
+      super_sonic_bolita_6: 1637831395
+      super_sonic_bolita_7: -1879998811
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
