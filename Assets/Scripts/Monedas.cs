@@ -11,7 +11,10 @@ public class Monedas : MonoBehaviour
         if(other.CompareTag("Jugador")){
             points.SumarScoore(Cantidad);
             Destroy(gameObject);
+
             
         }
     }
+
+
 }
