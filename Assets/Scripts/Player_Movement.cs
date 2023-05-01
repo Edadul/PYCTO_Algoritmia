@@ -15,6 +15,7 @@ public class Player_Movement : MonoBehaviour
 
     private float Horizontal;
     private bool Grounded;
+    private bool Salto;
 
     void Start()
     {
@@ -29,13 +30,13 @@ public class Player_Movement : MonoBehaviour
 
         if(Horizontal < 0.0f) 
         {
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             ColliderR2D.enabled = true;
             ColliderI2D.enabled = false;
         }
         else if (Horizontal > 0.0f) 
         {
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             ColliderR2D.enabled = true;
             ColliderI2D.enabled = false;
         }
@@ -49,7 +50,7 @@ public class Player_Movement : MonoBehaviour
         Animator.SetBool("Running", Horizontal != 0.0f);
 
         Debug.DrawRay(transform.position, Vector2.down*0.3f, Color.red);
-        if(Physics2D.Raycast(transform.position, Vector2.down, 0.3f))
+        if(Physics2D.Raycast(transform.position, Vector2.down, 0.4f))
         {
             Grounded = true;
         }else {
@@ -60,9 +61,10 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Grounded==true)
         {
             Jump();
+            Salto = true;
           
         }
-        Animator.SetBool("Bolita", Horizontal!=0.0f); 
+        Animator.SetBool("Salto", Salto == true && Grounded==false);
     }
 
     private void Jump()
