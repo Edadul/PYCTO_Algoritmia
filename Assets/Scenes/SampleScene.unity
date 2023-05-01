@@ -1742,8 +1742,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 3
   JumpForce: 500
-  ColliderI2D: {fileID: 648114542}
-  ColliderR2D: {fileID: 648114537}
+  ColliderCir2D: {fileID: 648114542}
+  ColliderCap2D: {fileID: 648114537}
 --- !u!70 &648114537
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1861,8 +1861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 648114535}
---- !u!60 &648114542
-PolygonCollider2D:
+--- !u!58 &648114542
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1874,45 +1874,9 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.26153848}
-    newSize: {x: 0.23, y: 0.33}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.052520063, y: 0.123747885}
-      - {x: -0.1, y: 0.09226101}
-      - {x: -0.09984456, y: 0.08457317}
-      - {x: -0.091566615, y: 0.08379213}
-      - {x: -0.09137177, y: 0.007962239}
-      - {x: -0.077514745, y: -0.06232343}
-      - {x: -0.06177993, y: -0.062963255}
-      - {x: -0.060286716, y: -0.11544197}
-      - {x: 0.07691333, y: -0.115147896}
-      - {x: 0.07695178, y: -0.10053156}
-      - {x: 0.054033983, y: -0.08507631}
-      - {x: 0.038848445, y: -0.08352067}
-      - {x: 0.037534688, y: -0.052906204}
-      - {x: 0.06141606, y: -0.053506635}
-      - {x: 0.07738438, y: -0.03792536}
-      - {x: 0.07634788, y: -0.023844026}
-      - {x: 0.06046014, y: -0.008251936}
-      - {x: 0.046627216, y: -0.0067571457}
-      - {x: 0.04682486, y: -0.015194688}
-      - {x: 0.023743257, y: -0.014936241}
-      - {x: 0.022839531, y: 0.0035317037}
-      - {x: 0.061306648, y: 0.024159223}
-      - {x: 0.061351, y: 0.075962}
-      - {x: 0.07736999, y: 0.08516651}
-      - {x: 0.07655795, y: 0.10034818}
-      - {x: 0.030201774, y: 0.10037249}
-      - {x: 0.030675866, y: 0.12374789}
+  m_Offset: {x: 0, y: 0.0170232}
+  serializedVersion: 2
+  m_Radius: 0.113746025
 --- !u!1 &665315778
 GameObject:
   m_ObjectHideFlags: 0
