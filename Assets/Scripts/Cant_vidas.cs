@@ -1,18 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Cant_vidas : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   [SerializeField] private Player_respawn res;
+    private float lifes=3; 
+    private float var;
+   
+   private TextMeshProUGUI textMesh;
+   private void Start()
     {
-        
+        textMesh= GetComponent<TextMeshProUGUI>();
     }
+    private void Update()
+    {
+       
 
-    // Update is called once per frame
-    void Update()
+        textMesh.text=lifes.ToString();
+    }
+    public void agregarvidas()
     {
         
+        lifes=lifes+1;
+        
+
     }
+    public void quitarvidas()
+    {
+        lifes=lifes-1;
+        if(lifes<1)
+        {
+            res.PlayerDamaged();
+        }
+    }
+    
+
 }
