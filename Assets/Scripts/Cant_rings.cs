@@ -7,6 +7,7 @@ public class Cant_rings : MonoBehaviour
     private float cant; 
     private float aux4;
     private TextMeshProUGUI textMesh;
+    [SerializeField] private Damage DAM;
     
    
      private void Start()
@@ -17,7 +18,6 @@ public class Cant_rings : MonoBehaviour
     {
 
         textMesh.text=cant.ToString("0");
-        comp_rings(aux4);
        
         
     }
@@ -27,10 +27,15 @@ public class Cant_rings : MonoBehaviour
     }
     public void comp_rings(float aux3)
     {
-        if(cant>0){
+        if(cant!=0 && cant>=1){
             aux3=1;
         }else{
-            aux3=0;
+            if(cant==0){
+             aux3=0;
+            zeroring();
+
+            }
+           
         }
         
         
