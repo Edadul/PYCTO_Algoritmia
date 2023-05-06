@@ -7,13 +7,10 @@ public class Player_Movement : MonoBehaviour
 {
     public float Speed;
     public float JumpForce;
-
     public CircleCollider2D ColliderCir2D;
     public CapsuleCollider2D ColliderCap2D;
-
     private Rigidbody2D Rb2D;
     private Animator Animator;
-
     private float Horizontal;
     private bool Grounded;
     private bool Salto;
@@ -27,15 +24,18 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        Horizontal = Input.GetAxis("Horizontal");
+       
+            Horizontal = Input.GetAxis("Horizontal");
+        
 
-        if(Horizontal < 0.0f) 
+
+        if (Horizontal < 0.0f)
         {
             transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             //ColliderR2D.enabled = true;
             //ColliderI2D.enabled = false;
         }
-        else if (Horizontal > 0.0f) 
+        else if (Horizontal > 0.0f)
         {
             transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             //ColliderR2D.enabled = true;
@@ -43,24 +43,24 @@ public class Player_Movement : MonoBehaviour
         }
         else if (Horizontal == 0.0f)
         {
-           //ColliderR2D.enabled = false;
-           //ColliderI2D.enabled = true;
+            //ColliderR2D.enabled = false;
+            //ColliderI2D.enabled = true;
         }
 
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
-        if(Physics2D.Raycast(transform.position, Vector2.down, 0.35f))
+        if (Physics2D.Raycast(transform.position, Vector2.down, 0.35f))
         {
             Grounded = true;
         }
-        else 
+        else
         {
-        Grounded = false;
+            Grounded = false;
         }
-       
 
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded==true)
+
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
             Jump();
             Salto = true;
@@ -76,13 +76,13 @@ public class Player_Movement : MonoBehaviour
             ColliderCap2D.enabled = false;
         }
 
-        Animator.SetBool("Salto", Salto == true && Grounded==false);
+        Animator.SetBool("Salto", Salto == true && Grounded == false);
     }
 
     private void Jump()
     {
         Rb2D.AddForce(Vector2.up * JumpForce);
-        
+
 
     }
 

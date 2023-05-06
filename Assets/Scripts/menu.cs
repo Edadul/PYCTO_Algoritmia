@@ -4,9 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class menu : MonoBehaviour
 {
+   [SerializeField] private AnimationClip cambio; 
+   private Animator an;
+   
+   private void Start(){
+    an=GetComponent<Animator>();
+   }
     public void Play(){
-     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-
+     an.SetTrigger("Final");
+     new WaitForSeconds(cambio.length);
+     SceneManager.LoadScene(1);
     }
     public void Salir(){
         Application.Quit();
