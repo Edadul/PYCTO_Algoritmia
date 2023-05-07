@@ -33,17 +33,17 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -68,9 +68,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,637 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cangrejo_movment_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b524b1aa6e8a764489adc7df4c2e9825
+      internalID: -2037048611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65246b7d28ea8f48802b8c255c7abd3
+      internalID: 1458831987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_2
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26370c3877faec4aac93b1fa12171e3
+      internalID: -2108396606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 13
+        width: 182
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136f3ded3465ece4fb0f60e0cba6e6ba
+      internalID: 1379545465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_4
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097fe12b255d24c4390ddfb15e319edf
+      internalID: -1371205232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_5
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76bffa8d9737244f9c4052ea09ca3a8
+      internalID: -719211632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_6
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124741031c44f5c479ffb83adb2959c5
+      internalID: -1215834542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_7
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c81b54e236f1a843be27fc2ef556670
+      internalID: -1610080537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_8
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 13
+        width: 182
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924d7e6812b6bbe458277e16685d87ee
+      internalID: -1171777749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_9
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba31d147a3a223419f1d2572460be43
+      internalID: -1214782852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_10
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf69ef5294b969429c6711a47629bef
+      internalID: -2113073769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_11
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 13
+        width: 184
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3532422130c9f4899251e9647a1943
+      internalID: -1967016081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_12
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313abd37664713b4b96559ff1a6a4646
+      internalID: 772184495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_13
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16632c13926eec74ab3ca8ac7e680e05
+      internalID: -1122457199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_14
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 13
+        width: 182
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f216b5bada2dc4eb22f76ab2b8db2c
+      internalID: -776182046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_15
+      rect:
+        serializedVersion: 2
+        x: 3169
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd478026422b464e8614096a3c2a7b3
+      internalID: 1967666392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_16
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12146566ed743c04db596769c5888cf1
+      internalID: -335119810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_17
+      rect:
+        serializedVersion: 2
+        x: 3589
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2908d42d261653f4e8068f63850ee07c
+      internalID: -1964016650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_18
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5176c4bf5dbbcd2429b3dfce0d9e2e7f
+      internalID: -732313730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_19
+      rect:
+        serializedVersion: 2
+        x: 4008
+        y: 13
+        width: 182
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b457774c0e514043b6baa281369b2c1
+      internalID: -1805130904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_20
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3226560fcd8cf4640a41b495788fa878
+      internalID: 1344114676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_21
+      rect:
+        serializedVersion: 2
+        x: 4428
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e1317cb72aa3f49afc8fa73fa80160
+      internalID: 1229515775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_22
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8daf53796d2b2a949ac77ea0fbf71543
+      internalID: -857003060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_23
+      rect:
+        serializedVersion: 2
+        x: 4848
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e9cc9f907fd5d4d9a2b96832cc73ce
+      internalID: 105934171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_24
+      rect:
+        serializedVersion: 2
+        x: 5057
+        y: 13
+        width: 182
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c60503841342464a93159a4c727039f
+      internalID: 426997434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_25
+      rect:
+        serializedVersion: 2
+        x: 5267
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7673e4a4e9e253a48914821dce1955fd
+      internalID: 1746628553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_26
+      rect:
+        serializedVersion: 2
+        x: 5477
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03572cdc79328524b82a33d56d00f8be
+      internalID: 1100782630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_27
+      rect:
+        serializedVersion: 2
+        x: 5690
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc677cb34efe7054c9ef509b461d11f3
+      internalID: -990663024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_28
+      rect:
+        serializedVersion: 2
+        x: 5900
+        y: 13
+        width: 181
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0990f3e911a085d438d48db4d8fbe20c
+      internalID: 1263078523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cangrejo_movment_29
+      rect:
+        serializedVersion: 2
+        x: 6109
+        y: 13
+        width: 182
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b983b2d7f5d97846a151da20be069f7
+      internalID: -196411855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +744,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cangrejo_movment_0: -2037048611
+      cangrejo_movment_1: 1458831987
+      cangrejo_movment_10: -2113073769
+      cangrejo_movment_11: -1967016081
+      cangrejo_movment_12: 772184495
+      cangrejo_movment_13: -1122457199
+      cangrejo_movment_14: -776182046
+      cangrejo_movment_15: 1967666392
+      cangrejo_movment_16: -335119810
+      cangrejo_movment_17: -1964016650
+      cangrejo_movment_18: -732313730
+      cangrejo_movment_19: -1805130904
+      cangrejo_movment_2: -2108396606
+      cangrejo_movment_20: 1344114676
+      cangrejo_movment_21: 1229515775
+      cangrejo_movment_22: -857003060
+      cangrejo_movment_23: 105934171
+      cangrejo_movment_24: 426997434
+      cangrejo_movment_25: 1746628553
+      cangrejo_movment_26: 1100782630
+      cangrejo_movment_27: -990663024
+      cangrejo_movment_28: 1263078523
+      cangrejo_movment_29: -196411855
+      cangrejo_movment_3: 1379545465
+      cangrejo_movment_4: -1371205232
+      cangrejo_movment_5: -719211632
+      cangrejo_movment_6: -1215834542
+      cangrejo_movment_7: -1610080537
+      cangrejo_movment_8: -1171777749
+      cangrejo_movment_9: -1214782852
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

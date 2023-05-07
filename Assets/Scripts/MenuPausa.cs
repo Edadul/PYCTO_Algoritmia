@@ -7,6 +7,7 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject opc;
+    [SerializeField] private GameObject cosasmenu;
    private bool detenido=false;
    private bool stop=false;
    public void Update(){
@@ -29,6 +30,7 @@ public void Paused(){
         Time.timeScale=0f;
         botonPausa.SetActive(false);
         menu.SetActive(true);
+        cosasmenu.SetActive(false);
     }
     public void RESUMEN(){
         detenido=false;
@@ -36,6 +38,7 @@ public void Paused(){
         Time.timeScale=1f;
         botonPausa.SetActive(true);
         menu.SetActive(false);
+        cosasmenu.SetActive(true);
     }
     public void Quit (){
         Application.Quit();
