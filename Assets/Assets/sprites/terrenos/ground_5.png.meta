@@ -119,20 +119,25 @@ TextureImporter:
       physicsShape:
       - - {x: -48, y: -76}
         - {x: -48, y: 28}
-        - {x: -24, y: 28}
-        - {x: -3, y: 28}
-        - {x: 12, y: 30}
-        - {x: 27, y: 38}
-        - {x: 36, y: 44}
-        - {x: 41, y: 52}
-        - {x: 44, y: 62}
-        - {x: 46, y: 73}
+        - {x: -37, y: 28}
+        - {x: -26, y: 28}
+        - {x: -13, y: 28}
+        - {x: -4, y: 28}
+        - {x: 3, y: 29}
+        - {x: 12, y: 31}
+        - {x: 18, y: 33}
+        - {x: 22, y: 35}
+        - {x: 28, y: 39}
+        - {x: 34, y: 45}
+        - {x: 39, y: 51}
+        - {x: 43, y: 59}
+        - {x: 45, y: 70}
         - {x: 48, y: 76}
         - {x: 48, y: -76}
       tessellationDetail: 0
       bones: []
-      spriteID: 0f3e39de1ee0ff04f8fbb3398e3414f4
-      internalID: 1465067394
+      spriteID: 275aef3106d5cef42a2faa1648d38a5e
+      internalID: 970580100
       vertices: []
       indices: 
       edges: []
@@ -148,21 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ground_5_0: 1465067394
-      ground_5_1: -1255500653
-      ground_5_10: -1693564807
-      ground_5_11: -147912969
-      ground_5_12: -117351260
-      ground_5_13: 2101203004
-      ground_5_14: 1968272018
-      ground_5_2: -285277355
-      ground_5_3: 119456554
-      ground_5_4: 1019376749
-      ground_5_5: -347831247
-      ground_5_6: -2004609040
-      ground_5_7: -956611599
-      ground_5_8: 43502562
-      ground_5_9: 1777896371
+      ground_5_0: 970580100
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
