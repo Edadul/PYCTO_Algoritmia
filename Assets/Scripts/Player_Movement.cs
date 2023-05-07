@@ -14,6 +14,7 @@ public class Player_Movement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private bool Salto;
+  
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
             Jump();
+            
             Salto = true;
         }
         if (Grounded)
@@ -73,6 +75,7 @@ public class Player_Movement : MonoBehaviour
     private void Jump()
     {
         Rb2D.AddForce(Vector2.up * JumpForce);
+       
 
 
     }
