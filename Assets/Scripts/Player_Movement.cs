@@ -32,19 +32,10 @@ public class Player_Movement : MonoBehaviour
         if (Horizontal < 0.0f)
         {
             transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-            //ColliderR2D.enabled = true;
-            //ColliderI2D.enabled = false;
         }
         else if (Horizontal > 0.0f)
         {
             transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-            //ColliderR2D.enabled = true;
-            //ColliderI2D.enabled = false;
-        }
-        else if (Horizontal == 0.0f)
-        {
-            //ColliderR2D.enabled = false;
-            //ColliderI2D.enabled = true;
         }
 
 
