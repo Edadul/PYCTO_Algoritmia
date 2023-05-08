@@ -6,25 +6,29 @@ public class Damage : MonoBehaviour
 {
     [SerializeField] private Cant_vidas aux1;
     [SerializeField] private Cant_rings comp;
-        
-     public Animator anim;
-    private float au,a;
-    private float vid;
+
+    public Animator anim;
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        comp.comp_rings(au);
+
         if (collision.transform.CompareTag("Jugador"))
         {
-            if(au!=0)
+            if (comp.cant > 0 && comp.sw==1)
             {
-            
-                anim.Play("Hit");
+                collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
+                anim.SetTrigger("Hit");
                 comp.zeroring();
-            }else{
-              
-               aux1.quitarvidas();
             }
+
+            if (comp.cant == 0 && comp.sw==0) 
+            {
+                collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
+                aux1.quitarvidas();
+            }
+
+
         }
 
     }

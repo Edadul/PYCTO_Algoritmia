@@ -14,7 +14,9 @@ public class Player_Movement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private bool Salto;
-  
+    public bool canmove=true;
+    [SerializeField] private Vector2 Velrebote;
+     [SerializeField]private float tiempoControl;
 
     void Start()
     {
@@ -25,8 +27,12 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-       
+        if(canmove)
+        {
             Horizontal = Input.GetAxis("Horizontal");
+        }
+       
+            
         
 
 
@@ -78,6 +84,21 @@ public class Player_Movement : MonoBehaviour
        
 
 
+    }
+    public void rebote(Vector2 golpe)
+    {
+        Rb2D.velocity= new Vector2(-Velrebote.x*golpe.x,Velrebote.y);
+    }
+        public void tomarDaño(Vector2 pos)
+    {
+        StartCoroutine(percontrol());
+        rebote(pos);
+    }
+    private IEnumerator percontrol()
+    {
+        canmove=false;
+        yield return new WaitForSeconds(tiempoControl);
+        canmove=true;
     }
 
     private void FixedUpdate()

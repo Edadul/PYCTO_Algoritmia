@@ -9,10 +9,13 @@ public class Cant_vidas : MonoBehaviour
     private float lifes=3; 
     private float var;
    
+  
    private TextMeshProUGUI textMesh;
    private void Start()
     {
         textMesh= GetComponent<TextMeshProUGUI>();
+      
+
     }
     private void Update()
     {
@@ -23,19 +26,19 @@ public class Cant_vidas : MonoBehaviour
     public void agregarvidas()
     {
         
-        lifes=lifes+1;
+        lifes++;
         
 
     }
     public void quitarvidas()
     {
-        lifes=lifes-1;
+        lifes--;
         
         if(lifes<1)
         {
             res.PlayerDamaged();
         }
     }
-    
+
 
 }
