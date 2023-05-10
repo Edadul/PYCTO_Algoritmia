@@ -17,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     public bool canmove=true;
     [SerializeField] private Vector2 Velrebote;
      [SerializeField]private float tiempoControl;
+     public AudioClip sonido;
 
     void Start()
     {
@@ -61,7 +62,7 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
             Jump();
-            
+              Camera.main.GetComponent<AudioSource>().PlayOneShot(sonido);
             Salto = true;
         }
         if (Grounded)
