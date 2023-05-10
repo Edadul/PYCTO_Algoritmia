@@ -1811,7 +1811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31434822, y: -0.11756268, z: -10}
+  m_LocalPosition: {x: -0.9405297, y: -0.121424824, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1863,17 +1863,17 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 14b1ab34222e85c498728c7cc50413eb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.518
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 161
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 50
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1939,7 +1939,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.564
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2386,6 +2386,9 @@ MonoBehaviour:
   JumpForce: 500
   ColliderCir2D: {fileID: 648114542}
   ColliderCap2D: {fileID: 648114537}
+  canmove: 1
+  Velrebote: {x: 0, y: 0}
+  tiempoControl: 0
 --- !u!70 &648114537
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4907,7 +4910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f1e3e2f376e6445bef946092f2bffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cant: 0
   DAM: {fileID: 0}
+  sw: 0
 --- !u!1 &1331738073
 GameObject:
   m_ObjectHideFlags: 0
