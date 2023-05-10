@@ -15,14 +15,14 @@ public class Damage : MonoBehaviour
 
         if (collision.transform.CompareTag("Jugador"))
         {
-            if (comp.cant > 0 && comp.sw==1)
+            if (comp.cant > 0  )
             {
                 collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
                 anim.SetTrigger("Hit");
                 comp.zeroring();
             }
 
-            if (comp.cant == 0 && comp.sw==0) 
+            if (comp.cant == 0 ) 
             {
                 collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
                 aux1.quitarvidas();

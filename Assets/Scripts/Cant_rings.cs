@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class Cant_rings : MonoBehaviour
 {
-    public float cant; 
+    public float cant=0; 
     private float aux4;
     private TextMeshProUGUI textMesh;
     [SerializeField] private Damage DAM;
@@ -18,7 +18,7 @@ public class Cant_rings : MonoBehaviour
     {
 
         textMesh.text=cant.ToString("0");
-        comp();
+        
        
         
     }
@@ -30,15 +30,6 @@ public class Cant_rings : MonoBehaviour
     public void zeroring(){
         cant=0;
     }
-    public void comp()
-    {
-        if(cant>0)
-        {
-            sw=1;
-        }else{
-            sw=0;
-        }
-
-    }
+    
     
 }
