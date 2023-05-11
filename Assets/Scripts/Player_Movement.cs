@@ -14,10 +14,10 @@ public class Player_Movement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private bool Salto;
-    public bool canmove=true;
+    public bool canmove = true;
     [SerializeField] private Vector2 Velrebote;
-     [SerializeField]private float tiempoControl;
-     public AudioClip sonido;
+    [SerializeField] private float tiempoControl;
+    public AudioClip sonido;
 
     void Start()
     {
@@ -28,10 +28,17 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        if(canmove)
+        if (canmove)
         {
             Horizontal = Input.GetAxis("Horizontal");
         }
+
+        StartCoroutine(SpeedSeconds());
+        if (Horizontal == 0.0f)
+        {
+            Speed = 1.0f;
+        }
+
 
         if (Horizontal < 0.0f)
         {
@@ -82,12 +89,12 @@ public class Player_Movement : MonoBehaviour
 
     private IEnumerator SpeedSeconds()
     {
-        yield return new WaitForSeconds(1);
-        Speed = 3f;
-        yield return new WaitForSeconds(2);
-        Speed = 5f;
-        yield return new WaitForSeconds(3);
-        Speed = 7f;
+        if(Horizontal != 0.0f)
+        {
+            yield return new WaitForSeconds(0.5f);
+            Speed = 3f;
+            Animator.SetFloat("Speed", Speed);
+        }
     }
     public void rebote(Vector2 golpe)
     {
@@ -108,13 +115,5 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         Rb2D.velocity = new Vector2(Horizontal * Speed, Rb2D.velocity.y);
-        if (Horizontal != 0f)
-        {
-            StartCoroutine(SpeedSeconds());
-        }
-        else
-        {
-            Speed = 2f;
-        }
     }
 }
