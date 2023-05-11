@@ -32,10 +32,6 @@ public class Player_Movement : MonoBehaviour
         {
             Horizontal = Input.GetAxis("Horizontal");
         }
-       
-            
-        
-
 
         if (Horizontal < 0.0f)
         {
@@ -82,9 +78,16 @@ public class Player_Movement : MonoBehaviour
     private void Jump()
     {
         Rb2D.AddForce(Vector2.up * JumpForce);
-       
+    }
 
-
+    private IEnumerator SpeedSeconds()
+    {
+        yield return new WaitForSeconds(1);
+        Speed = 3f;
+        yield return new WaitForSeconds(2);
+        Speed = 5f;
+        yield return new WaitForSeconds(3);
+        Speed = 7f;
     }
     public void rebote(Vector2 golpe)
     {
@@ -105,5 +108,13 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         Rb2D.velocity = new Vector2(Horizontal * Speed, Rb2D.velocity.y);
+        if (Horizontal != 0f)
+        {
+            StartCoroutine(SpeedSeconds());
+        }
+        else
+        {
+            Speed = 2f;
+        }
     }
 }
