@@ -94,6 +94,14 @@ public class Player_Movement : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             Speed = 3f;
             Animator.SetFloat("Speed", Speed);
+
+            yield return new WaitForSeconds(1.5f);
+            Speed = 4f;
+            Animator.SetFloat("Speed", Speed);
+
+            yield return new WaitForSeconds(2.5f);
+            Speed = 6f;
+            Animator.SetFloat("Speed", Speed);
         }
     }
     public void rebote(Vector2 golpe)
