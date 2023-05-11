@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
     public float Speed;
+    public float Acceleration;
     public float JumpForce;
     public CircleCollider2D ColliderCir2D;
     public CapsuleCollider2D ColliderCap2D;
     private Rigidbody2D Rb2D;
     private Animator Animator;
     private float Horizontal;
+    private float MaxSpeed = 7f;
     private bool Grounded;
     private bool Salto;
     public bool canmove = true;
@@ -33,22 +36,35 @@ public class Player_Movement : MonoBehaviour
             Horizontal = Input.GetAxis("Horizontal");
         }
 
-        StartCoroutine(SpeedSeconds());
+        RunningSpeed();
         if (Horizontal == 0.0f)
         {
-            Speed = 1.0f;
+            Speed = 1f;
         }
 
-
-        if (Horizontal < 0.0f)
+        if (Horizontal > 0.0f)
         {
-            transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                StartCoroutine(WaitBeforeStopR());
+            }
+            else
+            {
+                transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            }
         }
-        else if (Horizontal > 0.0f)
+        else if (Horizontal < 0.0f)
         {
-            transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-        }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                StartCoroutine(WaitBeforeStopL());
+            }
+            else
+            {
+                transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            }
 
+        }
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
@@ -80,6 +96,12 @@ public class Player_Movement : MonoBehaviour
         }
 
         Animator.SetBool("Salto", Salto == true && Grounded == false);
+        Animator.SetBool("Trans", Input.GetKey(KeyCode.LeftShift));
+
+        if (Animator.GetBool("Trans"))
+        {
+
+        }
     }
 
     private void Jump()
@@ -87,23 +109,33 @@ public class Player_Movement : MonoBehaviour
         Rb2D.AddForce(Vector2.up * JumpForce);
     }
 
-    private IEnumerator SpeedSeconds()
+    private void RunningSpeed()
     {
-        if(Horizontal != 0.0f)
+        Animator.SetFloat("Speed", Speed);
+        Speed += Acceleration * Time.deltaTime;
+        if (Speed > MaxSpeed)
         {
-            yield return new WaitForSeconds(0.5f);
-            Speed = 3f;
-            Animator.SetFloat("Speed", Speed);
-
-            yield return new WaitForSeconds(1.5f);
-            Speed = 4f;
-            Animator.SetFloat("Speed", Speed);
-
-            yield return new WaitForSeconds(2.5f);
-            Speed = 6f;
-            Animator.SetFloat("Speed", Speed);
+            Speed = MaxSpeed;
         }
     }
+
+    private IEnumerator WaitTrans()
+    {
+        yield return new WaitForSeconds(1);
+    }
+
+    private IEnumerator WaitBeforeStopR()
+    {
+        yield return new WaitForSeconds(1f);
+        transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+    }
+
+    private IEnumerator WaitBeforeStopL()
+    {
+        yield return new WaitForSeconds(1f);
+        transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+    }
+
     public void rebote(Vector2 golpe)
     {
         Rb2D.velocity= new Vector2(-Velrebote.x*golpe.x,Velrebote.y);
