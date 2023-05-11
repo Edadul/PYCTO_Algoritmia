@@ -1812,10 +1812,14 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.74617136, y: -0.120226055, z: -10}
 =======
   m_LocalPosition: {x: -0.47423172, y: -0.1185489, z: -10}
 >>>>>>> bfd0af6e06159f7ea60ca4d7de068f9259d8a066
+=======
+  m_LocalPosition: {x: -0.5103831, y: -0.11877182, z: -10}
+>>>>>>> parent of 04356d5 (avances animations)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2387,7 +2391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Acceleration: 1
   JumpForce: 500
   ColliderCir2D: {fileID: 648114542}
   ColliderCap2D: {fileID: 648114537}
