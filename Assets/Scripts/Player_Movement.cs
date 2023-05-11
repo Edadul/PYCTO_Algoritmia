@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
     public float Speed;
-    public float Acceleration;
     public float JumpForce;
     public CircleCollider2D ColliderCir2D;
     public CapsuleCollider2D ColliderCap2D;
     private Rigidbody2D Rb2D;
     private Animator Animator;
     private float Horizontal;
-    private float MaxSpeed = 7f;
     private bool Grounded;
     private bool Salto;
     public bool canmove = true;
@@ -36,12 +33,12 @@ public class Player_Movement : MonoBehaviour
             Horizontal = Input.GetAxis("Horizontal");
         }
 
-
-        SpeedRunning();
+        StartCoroutine(SpeedSeconds());
         if (Horizontal == 0.0f)
         {
             Speed = 1.0f;
         }
+
 
         if (Horizontal < 0.0f)
         {
@@ -50,11 +47,6 @@ public class Player_Movement : MonoBehaviour
         else if (Horizontal > 0.0f)
         {
             transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-        }
-
-        if(Speed > MaxSpeed)
-        {
-            Speed = MaxSpeed;
         }
 
 
@@ -95,16 +87,23 @@ public class Player_Movement : MonoBehaviour
         Rb2D.AddForce(Vector2.up * JumpForce);
     }
 
-    private void SpeedRunning()
+    private IEnumerator SpeedSeconds()
     {
-        if (Horizontal != 0.0f)
+        if(Horizontal != 0.0f)
         {
-            Speed += Acceleration * Time.deltaTime;
+            yield return new WaitForSeconds(0.5f);
+            Speed = 3f;
+            Animator.SetFloat("Speed", Speed);
+
+            yield return new WaitForSeconds(1.5f);
+            Speed = 4f;
+            Animator.SetFloat("Speed", Speed);
+
+            yield return new WaitForSeconds(2.5f);
+            Speed = 6f;
             Animator.SetFloat("Speed", Speed);
         }
-
     }
-
     public void rebote(Vector2 golpe)
     {
         Rb2D.velocity= new Vector2(-Velrebote.x*golpe.x,Velrebote.y);
