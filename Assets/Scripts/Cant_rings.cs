@@ -8,8 +8,6 @@ public class Cant_rings : MonoBehaviour
     private float aux4;
     private TextMeshProUGUI textMesh;
     [SerializeField] private Damage DAM;
-    public float sw;
-   
      private void Start()
     {
         textMesh= GetComponent<TextMeshProUGUI>();
@@ -17,8 +15,7 @@ public class Cant_rings : MonoBehaviour
     private void Update()
     {
 
-        textMesh.text=cant.ToString("0");
-        
+        textMesh.text=cant.ToString("0"); 
        
         
     }

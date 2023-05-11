@@ -20,14 +20,14 @@ public class Damage : MonoBehaviour
                 collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
                 anim.SetTrigger("Hit");
                 comp.zeroring();
+            }else {
+                if (comp.cant == 0)
+                {
+                    collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
+                    aux1.quitarvidas();
+                }
             }
-
-            if (comp.cant == 0 ) 
-            {
-                collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
-                aux1.quitarvidas();
-            }
-
+            
 
         }
 
