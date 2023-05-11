@@ -78,12 +78,13 @@ public class Player_Movement : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) && Grounded == true)
         {
             Jump();
               Camera.main.GetComponent<AudioSource>().PlayOneShot(sonido);
             Salto = true;
         }
+
         if (Grounded)
         {
             ColliderCir2D.enabled = false;
@@ -95,13 +96,9 @@ public class Player_Movement : MonoBehaviour
             ColliderCap2D.enabled = false;
         }
 
+        Animator.SetBool("Bolita", Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S) && Grounded == true);
         Animator.SetBool("Salto", Salto == true && Grounded == false);
         Animator.SetBool("Trans", Input.GetKey(KeyCode.LeftShift));
-
-        if (Animator.GetBool("Trans"))
-        {
-
-        }
     }
 
     private void Jump()

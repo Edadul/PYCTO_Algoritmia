@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 023a6ef6abd3c5e4d9004a5d217c2b04
+guid: 9bcd2616759cba142b43f934d59a4255
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 130
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,64 +105,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sonic_accelerate_realese_0
+      name: sonic_bolita_to_running_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 7
-        width: 47
-        height: 33
+        x: 13
+        y: 14
+        width: 23
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43ab5fba0d540054794ada0725df0a77
-      internalID: -1123899131
+      spriteID: dd326d2ba6b57624493adfef44f58d14
+      internalID: 352134531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_accelerate_realese_1
+      name: sonic_bolita_to_running_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 7
-        width: 47
-        height: 32
+        x: 63
+        y: 15
+        width: 24
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7622fdee9306a4f931ff5cf9415335
-      internalID: 2081267071
+      spriteID: 402b056e21bd19e4a9f5175a34476c63
+      internalID: 809067943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sonic_accelerate_realese_2
+      name: sonic_bolita_to_running_2
       rect:
         serializedVersion: 2
-        x: 116
+        x: 114
+        y: 13
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019e76043b33cc941b7fb914e1b28109
+      internalID: 961147040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sonic_bolita_to_running_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 13
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3753c39996059f4ab672208bd788cd5
+      internalID: -1953185804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sonic_bolita_to_running_4
+      rect:
+        serializedVersion: 2
+        x: 214
         y: 9
-        width: 49
-        height: 29
+        width: 23
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cded9660ff824c0488a1dafe1972f29b
-      internalID: -299025502
+      spriteID: 3cf1fe8805f98f94c8017f0838746574
+      internalID: -519470056
       vertices: []
       indices: 
       edges: []
@@ -178,9 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sonic_accelerate_realese_0: -1123899131
-      sonic_accelerate_realese_1: 2081267071
-      sonic_accelerate_realese_2: -299025502
+      sonic_bolita_to_running_0: 352134531
+      sonic_bolita_to_running_1: 809067943
+      sonic_bolita_to_running_2: 961147040
+      sonic_bolita_to_running_3: -1953185804
+      sonic_bolita_to_running_4: -519470056
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
