@@ -78,7 +78,7 @@ public class Player_Movement : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) && Grounded == true)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && Grounded == true)
         {
             Jump();
               Camera.main.GetComponent<AudioSource>().PlayOneShot(sonido);
