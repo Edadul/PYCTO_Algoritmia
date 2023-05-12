@@ -52,9 +52,15 @@ TagManager:
   - name: "Monta\xF1as"
     uniqueID: 3432619761
     locked: 0
+  - name: adornos1
+    uniqueID: 2493666595
+    locked: 0
+  - name: terreno
+    uniqueID: 1056387687
+    locked: 0
+  - name: adronos2
+    uniqueID: 805440333
+    locked: 0
   - name: Player and grid
     uniqueID: 1526203169
-    locked: 0
-  - name: Adornos y demas
-    uniqueID: 805440333
     locked: 0

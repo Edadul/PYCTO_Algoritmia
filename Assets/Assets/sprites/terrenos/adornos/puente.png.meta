@@ -109,9 +109,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 69
-        width: 32
-        height: 34
+        y: 1
+        width: 192
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: puente_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 69
-        width: 32
-        height: 34
+        x: 1
+        y: 40
+        width: 189
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: puente_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 69
-        width: 32
-        height: 34
+        x: 176
+        y: 63
+        width: 8
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: puente_3
       rect:
         serializedVersion: 2
-        x: 98
-        y: 69
-        width: 32
-        height: 34
+        x: 8
+        y: 63
+        width: 8
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: puente_4
       rect:
         serializedVersion: 2
-        x: 130
-        y: 69
-        width: 32
-        height: 34
+        x: 36
+        y: 63
+        width: 120
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,18 +213,18 @@ TextureImporter:
       name: puente_5
       rect:
         serializedVersion: 2
-        x: 162
-        y: 69
-        width: 32
-        height: 34
+        x: 156
+        y: 63
+        width: 20
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3340dca38c5353c42afdb9f9179e7234
+      spriteID: e1a73ef85c40644419f33da6c6b251e9
       internalID: 1485422156
       vertices: []
       indices: 
@@ -234,250 +234,19 @@ TextureImporter:
       name: puente_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 35
-        width: 32
-        height: 34
+        x: 16
+        y: 63
+        width: 20
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10defe5d0ea8c8d418b0b6ba04380c74
+      spriteID: 22f06a5e3c36a39478598a7a96ce2ef6
       internalID: -272265304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_7
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 35
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15b85d0026170044da8c08d7cf07afc5
-      internalID: 1795056826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_8
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 35
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be79ebb73a6f06e4a9fb9f43706a2372
-      internalID: 1767831305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_9
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 35
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43c715ee3707df74d99540ec3507919d
-      internalID: 1689271597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_10
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 35
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0119c2493178dcb418ecd6cf94236f2b
-      internalID: 99225831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_11
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 35
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c80f34dc8c185e45ae21d9146f9107c
-      internalID: -1560612005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_12
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 1
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29138fb15ccce6845ade93655ed5343a
-      internalID: 825196523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_13
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 1
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00f71702f75459a499a00c517602067f
-      internalID: -1426052091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_14
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 1
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35f2edd5477352b41b8e9027296b7340
-      internalID: -1994675380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_15
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 1
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a124d1ce7cef8884fb4cf3422c529ede
-      internalID: 1545485588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_16
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 1
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69deca7841d78394eadcdc2eebb41cee
-      internalID: -1862633982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puente_17
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 1
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dfe331a801892c4f8de990513fba481
-      internalID: -1919852030
       vertices: []
       indices: 
       edges: []
