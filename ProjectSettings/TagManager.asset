@@ -58,8 +58,11 @@ TagManager:
   - name: terreno
     uniqueID: 1056387687
     locked: 0
-  - name: adronos2
+  - name: adornos2
     uniqueID: 805440333
+    locked: 0
+  - name: adornos3
+    uniqueID: 3489371165
     locked: 0
   - name: Player and grid
     uniqueID: 1526203169
