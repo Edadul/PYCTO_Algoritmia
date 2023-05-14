@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -8,12 +10,12 @@ public class Player_Movement : MonoBehaviour
 {
     public float Speed;
     public float Acceleration;
-    public float JumpForce;
     public CircleCollider2D ColliderCir2D;
     public CapsuleCollider2D ColliderCap2D;
     private Rigidbody2D Rb2D;
     private Animator Animator;
     private float Horizontal;
+    private float JumpForce = 500f;
     private float MaxSpeed = 7f;
     private bool Grounded;
     private bool Salto;
@@ -37,41 +39,36 @@ public class Player_Movement : MonoBehaviour
         if (canmove)
         {
             Horizontal = Input.GetAxis("Horizontal");
+            JumpForce = 500f;
+        }
+        else
+        {
+            JumpForce = 0f;
+            Horizontal = 0f;
         }
 
-        RunningSpeed();
-        if (Horizontal == 0.0f)
+        if (Horizontal != 0)
         {
-            Speed = 1f;
+            RunningSpeed();
+        }
+        else if (Horizontal == 0.0f)
+        {
+            Speed = 1.0f;
         }
 
         if (Horizontal > 0.0f)
         {
-            if (Input.GetKeyUp(KeyCode.A))
-            {
-                StartCoroutine(WaitBeforeStopR());
-            }
-            else
-            {
-                transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-            }
+            transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
         }
         else if (Horizontal < 0.0f)
         {
-            if (Input.GetKeyUp(KeyCode.D))
-            {
-                StartCoroutine(WaitBeforeStopL());
-            }
-            else
-            {
-                transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-            }
-
+            transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
         }
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
-        if (Physics2D.Raycast(transform.position, Vector2.down, 0.35f))
+        Debug.DrawRay(Rb2D.transform.position, Rb2D.transform.up * -0.4f, UnityEngine.Color.red);
+        if (Physics2D.Raycast(transform.position, Vector2.down, 0.4f))
         {
             Grounded = true;
         }
@@ -80,11 +77,10 @@ public class Player_Movement : MonoBehaviour
             Grounded = false;
         }
 
-
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && Grounded == true)
         {
             Jump();
-              Camera.main.GetComponent<AudioSource>().PlayOneShot(sonido);
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(sonido);
             Salto = true;
         }
 
@@ -99,9 +95,25 @@ public class Player_Movement : MonoBehaviour
             ColliderCap2D.enabled = false;
         }
 
-        Animator.SetBool("Bolita", Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S) && Grounded == true);
+        if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && Grounded)
+        {
+            Animator.SetTrigger("Bolita");
+            StartCoroutine(BolitaToRun());
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Animator.SetTrigger("Trans Anim");
+            canmove = false;
+            StartCoroutine(Transformation());
+        }
+        else
+        {
+            Animator.ResetTrigger("Trans Anim");
+            Animator.SetBool("TtN", false);
+        }
+        
         Animator.SetBool("Salto", Salto == true && Grounded == false);
-        Animator.SetBool("Trans", Input.GetKey(KeyCode.LeftShift));
     }
 
     private void Jump()
@@ -119,21 +131,25 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
-    private IEnumerator WaitTrans()
+    private IEnumerator BolitaToRun()
     {
+        yield return new WaitForSeconds(2);
+        Animator.ResetTrigger("Bolita");
+        Animator.SetBool("BtR", true);
         yield return new WaitForSeconds(1);
+        Animator.SetBool("BtR", false);
     }
-
-    private IEnumerator WaitBeforeStopR()
-    {
+    private IEnumerator Transformation()
+    { 
         yield return new WaitForSeconds(1f);
-        transform.localScale = new Vector3(2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-    }
-
-    private IEnumerator WaitBeforeStopL()
-    {
-        yield return new WaitForSeconds(1f);
-        transform.localScale = new Vector3(-2.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        canmove = true;
+        Animator.SetBool("Trans", true);
+        yield return new WaitForSeconds(3f);
+        Animator.SetBool("Trans", false);
+        canmove = false;
+        yield return new WaitForSeconds(1.1f);
+        Animator.SetBool("TtN", true);
+        canmove = true;
     }
 
     public void rebote(Vector2 golpe)
