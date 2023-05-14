@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/PANTALLA.unity
     guid: 63099cc2e764c5f499ca65943e4b9e0f
   - enabled: 1
+    path: Assets/Scenes/TrancionPlay.unity
+    guid: 4bbce8b5099a1d343b66bd24790b9aa4
+  - enabled: 1
+    path: Assets/Scenes/Mecanica.unity
+    guid: 85f6e7ff6857f264ba5bfce48f5c17eb
+  - enabled: 1
+    path: Assets/Scenes/TrancionReglas.unity
+    guid: 4c5aa873d3e83bc458df2faf1daa9a16
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
