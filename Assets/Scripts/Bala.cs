@@ -26,15 +26,5 @@ public class Bala : MonoBehaviour
         Direccion = direccion;
     
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.transform.CompareTag("Jugador") & collision.transform.CompareTag("Ground"))
-        {
-
-            Destroy(gameObject);
-
-        }
-
-    }
+   
 }

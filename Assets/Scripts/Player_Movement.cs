@@ -21,7 +21,10 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private Vector2 Velrebote;
     [SerializeField] private float tiempoControl;
     public AudioClip sonido;
+    [SerializeField] private Cant_vidas aux1;
+    [SerializeField] private Cant_rings comp;
 
+    public Animator anim;
     void Start()
     {
         Rb2D = GetComponent<Rigidbody2D>();
@@ -152,5 +155,28 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         Rb2D.velocity = new Vector2(Horizontal * Speed, Rb2D.velocity.y);
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.transform.CompareTag("bala"))
+        {
+            if (comp.cant > 0)
+            {
+               
+    
+                comp.zeroring();
+            }
+            else
+            {
+                if (comp.cant == 0)
+                {
+                   
+                    aux1.quitarvidas();
+                }
+            }
+
+
+        }
     }
 }
