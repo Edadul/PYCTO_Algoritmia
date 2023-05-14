@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Mariquita : MonoBehaviour
 {
-      [SerializeField] private float VelocityMov;
+    [SerializeField] private float VelocityMov;
     [SerializeField] private LayerMask evitar;
     [SerializeField] private float Distancia;
     private Rigidbody2D rb2D;
@@ -38,9 +38,7 @@ public class Mariquita : MonoBehaviour
         else
         {
 
-            Vector3 direccion = Sonic.transform.position - transform.position;
-            if (direccion.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);          
 
         }
     }
