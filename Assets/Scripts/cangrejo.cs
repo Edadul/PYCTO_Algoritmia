@@ -66,7 +66,7 @@ public class cangrejo : MonoBehaviour
         else direccion = Vector3.left;
         GameObject Bala_cangrelo = Instantiate(Bala_cangreloprefab, transform.position + direccion * 0.1f, Quaternion.identity);
         Bala_cangrelo.GetComponent<Bala>().SetDirection(direccion);
-        //transform.position = Vector2.MoveTowards(transform.position, new Vector2(Sonic.transform.position.x, transform.position.y), VelocityMov * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(Sonic.transform.position.x, transform.position.y), VelocityMov * Time.deltaTime);
 
     }
     private void OnDrawGizmosSelected()
