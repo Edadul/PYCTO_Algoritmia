@@ -12,14 +12,17 @@ public class Player_Movement : MonoBehaviour
     public float Acceleration;
     public CircleCollider2D ColliderCir2D;
     public CapsuleCollider2D ColliderCap2D;
+    public float Contador_Esmeraldas = 0f;
     private Rigidbody2D Rb2D;
     private Animator Animator;
     private float Horizontal;
-    private float JumpForce = 500f;
+    public float JumpForce = 500f;
     private float MaxSpeed = 7f;
     private bool Grounded;
     private bool Salto;
+    private bool Hit;
     public bool canmove = true;
+    public bool Transformed = false;
     [SerializeField] private Vector2 Velrebote;
     [SerializeField] private float tiempoControl;
     public AudioClip sonido;
@@ -71,10 +74,12 @@ public class Player_Movement : MonoBehaviour
         if (Physics2D.Raycast(transform.position, Vector2.down, 0.4f))
         {
             Grounded = true;
+            Animator.SetTrigger("Grounded");
         }
         else
         {
             Grounded = false;
+            Animator.ResetTrigger("Grounded");
         }
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && Grounded == true)
@@ -101,7 +106,7 @@ public class Player_Movement : MonoBehaviour
             StartCoroutine(BolitaToRun());
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Contador_Esmeraldas == 7f && Input.GetKeyDown(KeyCode.LeftShift))
         {
             Animator.SetTrigger("Trans Anim");
             canmove = false;
@@ -112,7 +117,13 @@ public class Player_Movement : MonoBehaviour
             Animator.ResetTrigger("Trans Anim");
             Animator.SetBool("TtN", false);
         }
-        
+
+        if(Hit)
+        {
+            Rb2D.AddForce(Vector2.up * 3f);
+            Rb2D.AddForce(Vector2.right * 3f);
+        }
+
         Animator.SetBool("Salto", Salto == true && Grounded == false);
     }
 
@@ -131,6 +142,31 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Esmeralda"))
+        {
+            Contador_Esmeraldas++;
+            Debug.Log("Recogiste " + Contador_Esmeraldas);
+        }
+        
+        if (other.CompareTag("Trampolin"))
+        {
+            Animator.SetBool("Trampolin", true);
+            Rb2D.AddForce(Vector2.up * 800f);
+            Debug.Log("Saltaste en trampolin");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Trampolin"))
+        {
+            Animator.SetBool("Trampolin", false);
+        }
+    }
+
+
     private IEnumerator BolitaToRun()
     {
         yield return new WaitForSeconds(2);
@@ -144,22 +180,25 @@ public class Player_Movement : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canmove = true;
         Animator.SetBool("Trans", true);
-        yield return new WaitForSeconds(3f);
+        Transformed = true;
+        yield return new WaitForSeconds(5f);
         Animator.SetBool("Trans", false);
+        Transformed = false;
         canmove = false;
         yield return new WaitForSeconds(1.1f);
         Animator.SetBool("TtN", true);
         canmove = true;
     }
 
-    public void rebote(Vector2 golpe)
+    private IEnumerator HitSeconds()
     {
-        Rb2D.velocity= new Vector2(-Velrebote.x*golpe.x,Velrebote.y);
+        yield return new WaitForSeconds(1f);
+        Animator.SetBool("AfterHit", true);
     }
-        public void tomarDaño(Vector2 pos)
+
+    public void tomarDaño(Vector2 pos)
     {
         StartCoroutine(percontrol());
-        rebote(pos);
     }
     private IEnumerator percontrol()
     {
@@ -191,8 +230,21 @@ public class Player_Movement : MonoBehaviour
                     aux1.quitarvidas();
                 }
             }
-
-
         }
+        if (collision.transform.CompareTag("Enemigo"))
+        {
+            Hit = true;
+            Animator.SetBool("Hit", true);
+            StartCoroutine(HitSeconds());
+        }
+        else
+        {
+            Hit = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
     }
 }

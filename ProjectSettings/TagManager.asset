@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Jugador
   - Ground
+  - bala
+  - Esmeralda
+  - Trampolin
+  - Enemigo
   layers:
   - Default
   - TransparentFX
