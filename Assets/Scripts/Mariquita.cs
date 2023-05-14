@@ -62,4 +62,15 @@ public class Mariquita : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + transform.right * Distancia);
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Jugador"))
+        {
+            if(collision.transform.GetComponent<Player_Movement>().Transformed == true || collision.transform.GetComponent<Player_Movement>().Attack == true)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

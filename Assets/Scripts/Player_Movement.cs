@@ -23,6 +23,7 @@ public class Player_Movement : MonoBehaviour
     private bool Hit;
     public bool canmove = true;
     public bool Transformed = false;
+    public bool Attack = false;
     [SerializeField] private Vector2 Velrebote;
     [SerializeField] private float tiempoControl;
     public AudioClip sonido;
@@ -129,6 +130,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Jump()
     {
+        Attack = true;
         Rb2D.AddForce(Vector2.up * JumpForce);
     }
 
@@ -169,9 +171,11 @@ public class Player_Movement : MonoBehaviour
 
     private IEnumerator BolitaToRun()
     {
+        Attack = true;
         yield return new WaitForSeconds(2);
         Animator.ResetTrigger("Bolita");
         Animator.SetBool("BtR", true);
+        Attack = false;
         yield return new WaitForSeconds(1);
         Animator.SetBool("BtR", false);
     }
@@ -231,7 +235,7 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
-        if (collision.transform.CompareTag("Enemigo"))
+        if (collision.transform.CompareTag("Enemigo") && Transformed == false && Attack == false)
         {
             Hit = true;
             Animator.SetBool("Hit", true);
