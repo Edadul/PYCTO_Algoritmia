@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Girar
-  - 
+  - enemigos
   - 
   - 
   - 
@@ -66,4 +66,7 @@ TagManager:
     locked: 0
   - name: Player and grid
     uniqueID: 1526203169
+    locked: 0
+  - name: enemigos
+    uniqueID: 287817353
     locked: 0
