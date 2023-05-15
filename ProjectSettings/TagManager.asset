@@ -12,6 +12,13 @@ TagManager:
   - Enemigo
   - Bandera
   - Vacio
+  - AZUL
+  - AZULF
+  - AMARILLO
+  - VERDE
+  - ROJO
+  - BLANCO
+  - MORADO
   layers:
   - Default
   - TransparentFX

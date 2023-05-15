@@ -32,7 +32,7 @@ public class GameOver : MonoBehaviour
     public void volver()
     {
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("PANTALLA");
 
     }
 }

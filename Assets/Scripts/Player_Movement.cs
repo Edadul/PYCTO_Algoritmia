@@ -26,6 +26,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private Cant_rings comp;
     [SerializeField] private GameObject pass;
     [SerializeField] private GameObject other;
+    [SerializeField] private GameObject trans;
+    public bool active=true;
 
     public Animator anim;
     void Start()
@@ -106,6 +108,13 @@ public class Player_Movement : MonoBehaviour
             Attack = true;
             StartCoroutine(BolitaToRun());
         }
+        if(Contador_Esmeraldas==7f && active)
+        {
+            Time.timeScale = 0f;
+            trans.SetActive(true);
+            other.SetActive(false);
+        }
+        
 
         if (Contador_Esmeraldas == 7f && Input.GetKeyDown(KeyCode.LeftShift))
         {

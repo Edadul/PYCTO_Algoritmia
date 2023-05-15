@@ -19,8 +19,25 @@ public class Cant_vidas : MonoBehaviour
     private void Update()
     {
        
-      
         textMesh.text=lifes.ToString();
+        if (lifes < 1)
+        {
+
+            res.PlayerDamaged();
+            Time.timeScale = 0f;
+            Over.SetActive(true);
+            other.SetActive(false);
+
+        }
+        else
+        {
+            if(lifes!=0)
+            {
+                Time.timeScale = 1f;
+                Over.SetActive(false);
+                other.SetActive(true);
+            }
+        }
     }
     public void agregarvidas()
     {
@@ -33,23 +50,8 @@ public class Cant_vidas : MonoBehaviour
     {
         lifes--;
         
-        if(lifes<1)
-        {
-           
-            res.PlayerDamaged();
-            Time.timeScale = 0f;
-            Over.SetActive(true);
-            other.SetActive(false);
 
-        }
-        else
-        {
-
-            Time.timeScale = 1f;
-            Over.SetActive(false);
-            other.SetActive(true);
-
-        }
+       
  
     }
 
