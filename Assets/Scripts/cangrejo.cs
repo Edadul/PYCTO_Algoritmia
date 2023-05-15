@@ -14,6 +14,7 @@ public class cangrejo : MonoBehaviour
     private Rigidbody2D rb2D;
     public GameObject Sonic;
     public float balapas;
+    public bool girar = true;
 
     void Start()
     {
@@ -27,12 +28,16 @@ public class cangrejo : MonoBehaviour
     
     void Update()
     {
-        rb2D.velocity = new Vector2(VelocityMov * transform.right.x, rb2D.velocity.y);
-        RaycastHit2D informacion = Physics2D.Raycast(transform.position, transform.right, Distancia, evitar);
-        if (informacion)
+        if (girar)
         {
-            Girar();
+            rb2D.velocity = new Vector2(VelocityMov * transform.right.x, rb2D.velocity.y);
+            RaycastHit2D informacion = Physics2D.Raycast(transform.position, transform.right, Distancia, evitar);
+            if (informacion)
+            {
+                Girar();
+            }
         }
+       
 
         float dis = Mathf.Abs(Sonic.transform.position.x - transform.position.x);
         if (dis < 2.0f && Time.time > balapas+0.40f)
@@ -47,6 +52,7 @@ public class cangrejo : MonoBehaviour
         else
         {
 
+            girar = true;
             transform.localScale = new Vector3(x, y, z);
 
         }
@@ -54,6 +60,7 @@ public class cangrejo : MonoBehaviour
     private void Girar()
     {
 
+        girar = false;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
 
     }
