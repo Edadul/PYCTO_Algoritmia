@@ -123,12 +123,6 @@ public class Player_Movement : MonoBehaviour
             Animator.SetBool("TtN", false);
         }
 
-        if(Hit)
-        {
-            Rb2D.AddForce(Vector2.up * 3f);
-            Rb2D.AddForce(Vector2.right * 3f);
-        }
-
         if(Salto && Grounded == false)
         {
             Animator.SetBool("Salto", true);
@@ -250,7 +244,6 @@ public class Player_Movement : MonoBehaviour
         }
         if (collision.transform.CompareTag("Enemigo") && Transformed == false && Attack == false)
         {
-            Hit = true;
             Animator.SetBool("Hit", true);
             StartCoroutine(HitSeconds());
         }
