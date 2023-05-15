@@ -233,7 +233,7 @@ public class Player_Movement : MonoBehaviour
 
         if (collision.transform.CompareTag("bala"))
         {
-            if (comp.cant > 0)
+            if (comp.cant > 0 )
             {
                
     
@@ -241,7 +241,7 @@ public class Player_Movement : MonoBehaviour
             }
             else
             {
-                if (comp.cant == 0)
+                if (comp.cant == 0 && Transformed == false && Attack == false)
                 {
                    
                     aux1.quitarvidas();
