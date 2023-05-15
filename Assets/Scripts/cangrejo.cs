@@ -9,7 +9,7 @@ public class cangrejo : MonoBehaviour
     [SerializeField] private float VelocityMov;
     [SerializeField] private LayerMask evitar;
     [SerializeField] private float Distancia;
-    private float x, y, z;
+    private float X, Y, Z;
     public GameObject Bala_cangreloprefab;
     private Rigidbody2D rb2D;
     public GameObject Sonic;
@@ -20,9 +20,9 @@ public class cangrejo : MonoBehaviour
     {
        
         rb2D = GetComponent<Rigidbody2D>();
-        x = transform.localScale.x;
-        y = transform.localScale.y;
-        z = transform.localScale.z;
+        X = transform.localScale.x;
+        Y = transform.localScale.y;
+        Z = transform.localScale.z;
     
     }
     
@@ -40,20 +40,24 @@ public class cangrejo : MonoBehaviour
        
 
         float dis = Mathf.Abs(Sonic.transform.position.x - transform.position.x);
-        if (dis < 2.0f && Time.time > balapas+0.40f)
+        if (dis < 2.0f )
         {
             Vector3 direccion = Sonic.transform.position - transform.position;
-            if (direccion.x >= 0.0f) transform.localScale = new Vector3(x, y,z);
-            else transform.localScale = new Vector3(-x, y, z);
-            atack();
-            balapas=Time.time;
+            if (direccion.x >= 0.0f) transform.localScale = new Vector3(X, Y,Z);
+            else transform.localScale = new Vector3(-X, Y, Z);
+            if(Time.time > balapas + 0.40f)
+            {
+                atack();
+                balapas = Time.time;
+            }
+            
 
         }
         else
         {
 
             girar = true;
-            transform.localScale = new Vector3(x, y, z);
+            transform.localScale = new Vector3(X, Y, Z);
 
         }
     }
@@ -69,7 +73,7 @@ public class cangrejo : MonoBehaviour
     {
 
         Vector3 direccion;
-        if (transform.localScale.x == x) direccion = Vector3.right;
+        if (transform.localScale.x == X) direccion = Vector3.right;
         else direccion = Vector3.left;
         GameObject Bala_cangrelo = Instantiate(Bala_cangreloprefab, transform.position + direccion * 0.1f, Quaternion.identity);
         Bala_cangrelo.GetComponent<Bala>().SetDirection(direccion);
@@ -82,5 +86,15 @@ public class cangrejo : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + transform.right * Distancia);
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Jugador"))
+        {
+            if (collision.transform.GetComponent<Player_Movement>().Transformed == true || collision.transform.GetComponent<Player_Movement>().Attack == true)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
