@@ -128,6 +128,7 @@ public class Player_Movement : MonoBehaviour
         {
             Animator.SetBool("Salto", true);
         }
+
     }
 
     private void Jump()
@@ -156,6 +157,7 @@ public class Player_Movement : MonoBehaviour
         
         if (other.CompareTag("Trampolin"))
         {
+            StartCoroutine(SaltoTrampolin());
             Animator.SetBool("Trampolin", true);
             Rb2D.AddForce(Vector2.up * 800f);
             Debug.Log("Saltaste en trampolin");
@@ -168,6 +170,13 @@ public class Player_Movement : MonoBehaviour
         {
             Animator.SetBool("Trampolin", false);
         }
+    }
+
+    private IEnumerator SaltoTrampolin()
+    {
+        Physics2D.IgnoreLayerCollision(8, 9, true);
+        yield return new WaitForSeconds(0.5f);
+        Physics2D.IgnoreLayerCollision(8, 9, false);
     }
 
     private IEnumerator SaltoAttack()
