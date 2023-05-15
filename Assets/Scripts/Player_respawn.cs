@@ -8,8 +8,7 @@ public class Player_respawn : MonoBehaviour
    public GameObject[] sonic_vidas;
     public Animator anim;
     private float checkPointPositionX, checkPointPositionY;
-    
-     [SerializeField] private Cant_vidas comp;
+
     private float lif;
     void Start()
     {
@@ -26,9 +25,11 @@ public class Player_respawn : MonoBehaviour
     }
     public void PlayerDamaged()
     {
-         
+
         anim.Play("Dead");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      
+
     }
+   
    
 }

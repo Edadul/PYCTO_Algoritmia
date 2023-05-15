@@ -10,6 +10,7 @@ TagManager:
   - Esmeralda
   - Trampolin
   - Enemigo
+  - Bandera
   layers:
   - Default
   - TransparentFX

@@ -29,6 +29,8 @@ public class Player_Movement : MonoBehaviour
     public AudioClip sonido;
     [SerializeField] private Cant_vidas aux1;
     [SerializeField] private Cant_rings comp;
+    [SerializeField] private GameObject pass;
+    [SerializeField] private GameObject other;
 
     public Animator anim;
     void Start()
@@ -244,6 +246,18 @@ public class Player_Movement : MonoBehaviour
         else
         {
             Hit = false;
+        }
+        if (collision.transform.CompareTag("Bandera"))
+        {
+            Time.timeScale = 0f;
+            pass.SetActive(true);
+            other.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            pass.SetActive(false);
+            other.SetActive(true);
         }
     }
 

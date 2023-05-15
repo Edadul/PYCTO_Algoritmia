@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class Puntaje : MonoBehaviour
 {
-    private float scoore;
+    public float scoore;
     private TextMeshProUGUI textMesh;
     [SerializeField] private Cant_vidas aux;
     private void Start()
