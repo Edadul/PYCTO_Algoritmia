@@ -164,6 +164,14 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Vacio"))
+        {
+            aux1.quitarvidas();
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Trampolin"))
@@ -277,10 +285,5 @@ public class Player_Movement : MonoBehaviour
             pass.SetActive(false);
             other.SetActive(true);
         }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
     }
 }

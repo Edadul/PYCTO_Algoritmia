@@ -11,6 +11,7 @@ TagManager:
   - Trampolin
   - Enemigo
   - Bandera
+  - Vacio
   layers:
   - Default
   - TransparentFX
