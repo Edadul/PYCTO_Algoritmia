@@ -20,7 +20,7 @@ public class Player_Movement : MonoBehaviour
     private float MaxSpeed = 7f;
     private bool Grounded;
     private bool Salto;
-    private bool Hit;
+    public bool Hit;
     public bool canmove = true;
     public bool Transformed = false;
     public bool Attack = false;
@@ -38,6 +38,7 @@ public class Player_Movement : MonoBehaviour
         Rb2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         Vector3 position = gameObject.transform.position;
+        Physics2D.IgnoreLayerCollision(7, 8, false);
     }
 
     void Update()
@@ -199,12 +200,19 @@ public class Player_Movement : MonoBehaviour
         yield return new WaitForSeconds(1.1f);
         Animator.SetBool("TtN", true);
         canmove = true;
+        Contador_Esmeraldas = 0f;
     }
 
     private IEnumerator HitSeconds()
     {
+        Animator.SetBool("Hit", true);
+        Physics2D.IgnoreLayerCollision(7, 8, true);
         yield return new WaitForSeconds(1f);
+        Animator.SetBool("Hit", false);
         Animator.SetBool("AfterHit", true);
+        Physics2D.IgnoreLayerCollision(7, 8, false);
+        yield return new WaitForSeconds(0.5f);
+        Animator.SetBool("AfterHit", false);
     }
 
     public void tomarDaño(Vector2 pos)
@@ -244,13 +252,10 @@ public class Player_Movement : MonoBehaviour
         }
         if (collision.transform.CompareTag("Enemigo") && Transformed == false && Attack == false)
         {
-            Animator.SetBool("Hit", true);
+            Rb2D.velocity = new Vector2(1f, 5f);
             StartCoroutine(HitSeconds());
         }
-        else
-        {
-            Hit = false;
-        }
+
         if (collision.transform.CompareTag("Bandera"))
         {
             Time.timeScale = 0f;

@@ -8,7 +8,7 @@ public class Damage : MonoBehaviour
     [SerializeField] private Cant_rings comp;
 
     public Animator anim;
-    
+
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,18 +17,17 @@ public class Damage : MonoBehaviour
         {
             if (comp.cant > 0 && collision.transform.GetComponent<Player_Movement>().Attack == false)
             {
-                Debug.Log("Toma mango");
                 collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
                 comp.zeroring();
-            }else {
+            }
+            else { 
                 if (comp.cant == 0 && collision.transform.GetComponent<Player_Movement>().Attack == false)
                 {
-                    Debug.Log("A dormir nene");
                     collision.gameObject.GetComponent<Player_Movement>().tomarDaño(collision.GetContact(0).normal);
                     aux1.quitarvidas();
                 }
             }
-            
+
 
         }
 
