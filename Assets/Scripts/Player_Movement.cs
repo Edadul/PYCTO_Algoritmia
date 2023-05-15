@@ -1,9 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
