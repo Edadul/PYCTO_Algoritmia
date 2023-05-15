@@ -9,7 +9,7 @@ public class GanarLevel : MonoBehaviour
     public void OnCollisionExit2D(Collision2D collision)
     {
 
-        if (collision.transform.CompareTag("Bandera"))
+        if (collision.transform.CompareTag("Jugador"))
         {
             Time.timeScale = 0f;
             pass.SetActive(true);

@@ -12,6 +12,7 @@ public class Mariquita : MonoBehaviour
     [SerializeField] private float Distancia;
     private Rigidbody2D rb2D;
     public GameObject Sonic;
+    private bool girar=true;
     
    void Start()
     {
@@ -19,15 +20,19 @@ public class Mariquita : MonoBehaviour
     }
     void Update()
     {
-        rb2D.velocity = new Vector2(VelocityMov * transform.right.x, rb2D.velocity.y);
-        RaycastHit2D informacion = Physics2D.Raycast(transform.position, transform.right, Distancia, evitar);
-        if(informacion)
+        if(girar)
         {
-            Girar();
+            rb2D.velocity = new Vector2(VelocityMov * transform.right.x, rb2D.velocity.y);
+            RaycastHit2D informacion = Physics2D.Raycast(transform.position, transform.right, Distancia, evitar);
+            if (informacion)
+            {
+                Girar();
+            }
         }
+       
 
         float dis = Mathf.Abs(Sonic.transform.position.x - transform.position.x);
-        if (dis < 2.0f)
+        if (dis < 2.0f )
         {
             Vector3 direccion = Sonic.transform.position - transform.position;
             if (direccion.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -38,6 +43,7 @@ public class Mariquita : MonoBehaviour
         else
         {
 
+            girar = true;
              transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);          
 
         }
@@ -52,6 +58,7 @@ public class Mariquita : MonoBehaviour
     private void atack()
     {
 
+        girar = false;
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(Sonic.transform.position.x, transform.position.y), VelocityMov * Time.deltaTime);
 
     }
