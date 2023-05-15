@@ -94,6 +94,7 @@ public class Player_Movement : MonoBehaviour
 
         if (Grounded)
         {
+            Animator.SetBool("Salto", false);
             ColliderCir2D.enabled = false;
             ColliderCap2D.enabled = true;
         }
@@ -106,6 +107,7 @@ public class Player_Movement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && Grounded)
         {
             Animator.SetTrigger("Bolita");
+            Attack = true;
             StartCoroutine(BolitaToRun());
         }
 
@@ -127,13 +129,16 @@ public class Player_Movement : MonoBehaviour
             Rb2D.AddForce(Vector2.right * 3f);
         }
 
-        Animator.SetBool("Salto", Salto == true && Grounded == false);
+        if(Salto && Grounded == false)
+        {
+            Animator.SetBool("Salto", true);
+        }
     }
 
     private void Jump()
     {
-        Attack = true;
         Rb2D.AddForce(Vector2.up * JumpForce);
+        StartCoroutine(SaltoAttack());
     }
 
     private void RunningSpeed()
@@ -170,14 +175,19 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    private IEnumerator SaltoAttack()
+    {
+        Attack = true;
+        yield return new WaitForSeconds(1.5f);
+        Attack = false;
+    }
 
     private IEnumerator BolitaToRun()
     {
-        Attack = true;
         yield return new WaitForSeconds(2);
+        Attack = false;
         Animator.ResetTrigger("Bolita");
         Animator.SetBool("BtR", true);
-        Attack = false;
         yield return new WaitForSeconds(1);
         Animator.SetBool("BtR", false);
     }
@@ -187,7 +197,8 @@ public class Player_Movement : MonoBehaviour
         canmove = true;
         Animator.SetBool("Trans", true);
         Transformed = true;
-        yield return new WaitForSeconds(5f);
+        Debug.Log(5f * aux1.lifes);
+        yield return new WaitForSeconds(5f * aux1.lifes);
         Animator.SetBool("Trans", false);
         Transformed = false;
         canmove = false;
