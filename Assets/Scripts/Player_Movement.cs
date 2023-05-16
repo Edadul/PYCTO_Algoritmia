@@ -214,7 +214,7 @@ public class Player_Movement : MonoBehaviour
         Animator.SetBool("Trans", true);
         Transformed = true;
         Debug.Log(5f * aux1.lifes);
-        yield return new WaitForSeconds(5f * aux1.lifes);
+        yield return new WaitForSeconds(3f * aux1.lifes);
         Animator.SetBool("Trans", false);
         Transformed = false;
         canmove = false;
