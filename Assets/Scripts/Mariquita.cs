@@ -13,8 +13,9 @@ public class Mariquita : MonoBehaviour
     private Rigidbody2D rb2D;
     public GameObject Sonic;
     private bool girar=true;
-    
-   void Start()
+    public AudioClip vencido;
+
+    void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();   
     }
@@ -76,6 +77,7 @@ public class Mariquita : MonoBehaviour
         {
             if(collision.transform.GetComponent<Player_Movement>().Transformed == true || collision.transform.GetComponent<Player_Movement>().Attack == true)
             {
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(vencido);
                 Destroy(gameObject);
             }
         }

@@ -28,6 +28,9 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private GameObject other;
     [SerializeField] private GameObject trans;
     public bool active=true;
+    public AudioClip trampolin;
+    public AudioClip golpeado;
+
 
     public Animator anim;
     void Start()
@@ -161,6 +164,7 @@ public class Player_Movement : MonoBehaviour
         
         if (other.CompareTag("Trampolin"))
         {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(trampolin);
             StartCoroutine(SaltoTrampolin());
             Animator.SetBool("Trampolin", true);
             Rb2D.AddForce(Vector2.up * 500f);
@@ -226,6 +230,7 @@ public class Player_Movement : MonoBehaviour
 
     private IEnumerator HitSeconds()
     {
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(golpeado);
         Animator.SetBool("Hit", true);
         Physics2D.IgnoreLayerCollision(7, 8, true);
         yield return new WaitForSeconds(1f);

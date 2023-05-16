@@ -15,6 +15,7 @@ public class cangrejo : MonoBehaviour
     public GameObject Sonic;
     public float balapas;
     public bool girar = true;
+    public AudioClip vencido2;
 
     void Start()
     {
@@ -93,6 +94,7 @@ public class cangrejo : MonoBehaviour
         {
             if (collision.transform.GetComponent<Player_Movement>().Transformed == true || collision.transform.GetComponent<Player_Movement>().Attack == true)
             {
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(vencido2);
                 Destroy(gameObject);
             }
         }
