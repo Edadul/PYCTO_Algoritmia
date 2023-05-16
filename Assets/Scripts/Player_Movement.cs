@@ -163,7 +163,7 @@ public class Player_Movement : MonoBehaviour
         {
             StartCoroutine(SaltoTrampolin());
             Animator.SetBool("Trampolin", true);
-            Rb2D.AddForce(Vector2.up * 800f);
+            Rb2D.AddForce(Vector2.up * 500f);
             Debug.Log("Saltaste en trampolin");
         }
     }
