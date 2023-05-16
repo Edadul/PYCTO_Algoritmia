@@ -167,7 +167,7 @@ public class Player_Movement : MonoBehaviour
             Camera.main.GetComponent<AudioSource>().PlayOneShot(trampolin);
             StartCoroutine(SaltoTrampolin());
             Animator.SetBool("Trampolin", true);
-            Rb2D.AddForce(Vector2.up * 500f);
+            Rb2D.velocity = new Vector2(0f, 7f);
             Debug.Log("Saltaste en trampolin");
         }
     }
@@ -191,7 +191,7 @@ public class Player_Movement : MonoBehaviour
     private IEnumerator SaltoTrampolin()
     {
         Physics2D.IgnoreLayerCollision(8, 9, true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         Physics2D.IgnoreLayerCollision(8, 9, false);
     }
 
